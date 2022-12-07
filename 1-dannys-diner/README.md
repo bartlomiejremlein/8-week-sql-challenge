@@ -8,13 +8,9 @@
 
 Danny is the owner of an Asian restuarant selling sushi, ramen, and curry. He wants to use data to learn more about his customers, their visiting patterns, how money they've spent and which menu items are their favorite. This data will help him deliver a better and more personalized experience for his loyal customers. 
 
-***
-
 ## 🔗 Entity Relationship Diagram
 
 ![ER Diagram](../src/erd-dannys-diner.png)
-
-***
 
 ## ❓ Questions
 
