@@ -1,4 +1,4 @@
- 1. What is the total amount each customer spent at the restaurant? 
+** 1. What is the total amount each customer spent at the restaurant? **
 
 ```sql
 SELECT
@@ -20,9 +20,9 @@ Output:
 | B           | 74          |
 | C           | 36          |
 
-___
 
-2. How many days has each customer visited the restaurant?
+
+**2. How many days has each customer visited the restaurant?**
 
 ```sql
 SELECT
@@ -42,9 +42,9 @@ ORDER BY
 | B           | 6      |
 | C           | 2      |
 
-___
 
-3. What was the first item from the menu purchased by each customer?
+
+**3. What was the first item from the menu purchased by each customer?**
 
 ```sql
 WITH orders_by_customers_ranked AS (
@@ -73,9 +73,9 @@ WHERE
 | A           | curry        | 2021-01-07 |
 | B           | sushi        | 2021-01-04 |
 | C           | ramen        | 2021-01-01 |
-___
 
-4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+
+**4. What is the most purchased item on the menu and how many times was it purchased by all customers?**
 
 ```sql
 SELECT
@@ -96,10 +96,10 @@ LIMIT
 |--------------|-----------------|
 | ramen        | 8               |
 
-___
 
 
-5. Which item was the most popular for each customer?
+
+**5. Which item was the most popular for each customer?**
 
 ```sql
 WITH total_orders_per_product_per_customer AS (
@@ -143,10 +143,10 @@ WHERE
 | B           | sushi        | 2           |
 | C           | ramen        | 3           |
 
-___
 
 
-6. Which item was purchased first by the customer after they became a member?
+
+**6. Which item was purchased first by the customer after they became a member?**
 
 ```sql
 WITH ranked_orders_after_joining AS (
@@ -179,10 +179,10 @@ ORDER BY
 | A           | curry        |
 | B           | sushi        |
 
-___
 
 
-7. Which item was purchased just before the customer became a member?
+
+**7. Which item was purchased just before the customer became a member?**
 
 ```sql
 WITH ranked_orders_before_joining AS (
@@ -215,10 +215,10 @@ WHERE
 | A           | sushi        |
 | B           | sushi        |
 
-___
 
 
-8. What is the total items and amount spent for each member before they became a member?
+
+**8. What is the total items and amount spent for each member before they became a member?**
 
 ```sql
 SELECT
@@ -240,10 +240,10 @@ GROUP BY
 | A           | 2           | 25    |
 | B           | 3           | 40    |
 
-___
 
 
-9.  If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
+
+**9.  If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?**
 
 ```sql
 WITH customer_points AS (
@@ -289,10 +289,9 @@ ORDER BY
 | B           | 740          |
 | C           | 360          |
 
-___
 
 
-10.  In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
+**10.  In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?**
 
 ```sql
 WITH orders_with_points AS (
@@ -331,9 +330,9 @@ GROUP BY
 | A           | 1370         |
 | B           | 820          |
 
-___
 
-Bonus 1. 
+
+**Bonus 1.**
 
 ```sql
 SELECT
@@ -372,10 +371,10 @@ ORDER BY
 | C           | 2021-01-01 | ramen        | 12    | N      |
 | C           | 2021-01-07 | ramen        | 12    | N      |
 
-___
 
 
-Bonus 2. 
+
+**Bonus 2.**
 
 ```sql
 WITH loyalty_program AS (
