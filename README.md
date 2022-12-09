@@ -13,5 +13,9 @@ I am using **PostgreSQL** to tackle the questions posed in the case studies. Eac
 
 Link to original: [Case Study #1 - Danny's Diner](https://8weeksqlchallenge.com/case-study-1/)
 
-***
+## 🍕 **[Case Study #2 Pizza Runner](2-pizza-runner)**
+<p align="center">
+<img width="250px" src="https://8weeksqlchallenge.com/images/case-study-designs/2.png">
+</p>
 
+Link to original: [Case Study #2 - Pizza Runner](https://8weeksqlchallenge.com/case-study-2/)
