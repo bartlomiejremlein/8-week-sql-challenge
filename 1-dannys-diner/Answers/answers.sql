@@ -100,7 +100,7 @@ WITH ranked_orders_after_joining AS (
     row_number() over(PARTITION by s.customer_id) AS ranking
   FROM
     sales s
-    RIGHT JOIN members m ON s.customer_id = m.customer_id
+    LEFT JOIN members m ON s.customer_id = m.customer_id
   WHERE
     order_date >= join_date
 )
@@ -129,7 +129,7 @@ WITH ranked_orders_before_joining AS (
     ) AS ranking
   FROM
     sales
-    RIGHT JOIN members ON sales.customer_id = members.customer_id
+    LEFT JOIN members ON sales.customer_id = members.customer_id
   WHERE
     order_date < join_date
 )
@@ -147,7 +147,7 @@ SELECT
   sum(price) AS total
 FROM
   sales s
-  RIGHT JOIN members ON s.customer_id = members.customer_id
+  LEFT JOIN members ON s.customer_id = members.customer_id
   LEFT JOIN menu m ON s.product_id = m.product_id
 WHERE
   order_date < join_date
@@ -209,10 +209,16 @@ WITH orders_with_points AS (
     END AS points
   FROM
     sales s
-    RIGHT JOIN members ON s.customer_id = members.customer_id
+    LEFT JOIN members ON s.customer_id = members.customer_id
     LEFT JOIN menu m ON s.product_id = m.product_id
   WHERE
     order_date < '2021-02-01'
+    AND s.customer_id IN (
+      SELECT
+        customer_id
+      FROM
+        members
+    )
 )
 SELECT
   customer_id,
