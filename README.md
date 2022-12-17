@@ -19,3 +19,10 @@ Link to original: [Case Study #1 - Danny's Diner](https://8weeksqlchallenge.com/
 </p>
 
 Link to original: [Case Study #2 - Pizza Runner](https://8weeksqlchallenge.com/case-study-2/)
+
+## 🥑 **[Case Study #3 Foodie-Fi](3-foodie-fi)**
+<p align="center">
+<img width="250px" src="https://8weeksqlchallenge.com/images/case-study-designs/3.png">
+</p>
+
+Link to original: [Case Study #3 - Foodie-Fi](https://8weeksqlchallenge.com/case-study-3/)
